@@ -2,14 +2,14 @@ import time
 
 def binary_search (arr, item):
     down = 0
-    high = len(arr) - 1
-    while down <= high:
-        middle = (down + high) // 2 # two slashes considers the integer part of division
+    top = len(arr) - 1
+    while down <= top:
+        middle = (down + top) // 2 # two slashes considers the integer part of division
         guess = arr[middle]
         if guess == item:
             return middle
         if guess > item:
-            high = middle - 1
+            top = middle - 1
         else:
             down = middle + 1
 
